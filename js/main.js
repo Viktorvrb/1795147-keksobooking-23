@@ -7,7 +7,7 @@ const getRandomIntRound=(min, max)=>{
     max =min;
     min =swap;
   }
-  return Math.floor(Math.random() * (max - min)) + min;
+  return Math.floor(Math.random() * (max - min)) + min;//<--фрагмент кода взят из https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 };
 getRandomIntRound();
 const getRandomIntFloat=(min, max, dig)=>{
@@ -17,7 +17,7 @@ const getRandomIntFloat=(min, max, dig)=>{
       max =min;
       min =swap;
     }
-    const num = (Math.random() * (max - min)) + min;
+    const num = (Math.random() * (max - min)) + min;//<--фрагмент кода взят из https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/random
     return +num.toFixed(dig);
   } else {
     throw new Error ('Parameters invalid');
