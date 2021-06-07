@@ -1,26 +1,24 @@
-const getRandomIntRound=(min, max)=>{
-  if (min%1!==0 && max%1!==0){
+const getRandomInt = (a, b) => {
+  if (a % 1 !== 0 || b % 1 !== 0) {
     throw new Error ('Only Int Numbers Allowed As The Parameters');
   }
-  if (min>max){
-    const swap = max;
-    max =min;
-    min =swap;
-  }
-  return Math.floor(Math.random() * (max - min)) + min;//<--фрагмент кода взят из https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+
+  const min = Math.min(a, b);
+  const max = Math.max(a, b);
+
+  return min + Math.floor(Math.random() * (max - min));
 };
-getRandomIntRound();
-const getRandomIntFloat=(min, max, dig)=>{
-  if (min>=0 && dig>=0 && dig<20){
-    if (min>max){
-      const swap = max;
-      max =min;
-      min =swap;
-    }
-    const num = (Math.random() * (max - min)) + min;//<--фрагмент кода взят из https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-    return +num.toFixed(dig);
-  } else {
+
+const getRandomFloat = (a, b, n) => {
+  if (n < 0) {
     throw new Error ('Parameters invalid');
   }
+
+  const min = Math.min(a, b);
+  const max = Math.max(a, b);
+
+  return Number((min + (Math.random() * (max - min))).toFixed(n));
 };
-getRandomIntFloat ();
+
+getRandomInt();
+getRandomFloat();
