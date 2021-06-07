@@ -1,23 +1,23 @@
-const getRandomInt = (a, b) => {
-  if (a % 1 !== 0 || b % 1 !== 0) {
+const getRandomInt = (value1, value2) => {
+  if (value1 % 1 !== 0 || value2 % 1 !== 0) {
     throw new Error ('Only Int Numbers Allowed As The Parameters');
   }
 
-  const min = Math.min(a, b);
-  const max = Math.max(a, b);
+  const min = Math.min(value1, value2);
+  const max = Math.max(value1, value2);
 
   return min + Math.floor(Math.random() * (max - min));
 };
 
-const getRandomFloat = (a, b, n) => {
-  if (n < 0) {
+const getRandomFloat = (value1, value2, num) => {
+  if (num < 0) {
     throw new Error ('Parameters invalid');
   }
 
-  const min = Math.min(a, b);
-  const max = Math.max(a, b);
+  const min = Math.min(value1, value2);
+  const max = Math.max(value1, value2);
 
-  return Number((min + (Math.random() * (max - min))).toFixed(n));
+  return Number((min + (Math.random() * (max - min))).toFixed(num));
 };
 
 getRandomInt();
