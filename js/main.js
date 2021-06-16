@@ -23,8 +23,8 @@ const getRandomFloat = (value1, value2, num) => {
 const estateType = ['palace', 'flat', 'house', 'bungalow', 'hotel'];
 const timetoCheck = ['12:00', '13:00', '14:00'];
 let avatarNum = 0;
-let x = 0;
-let y = 0;
+let coordX = 0;
+let coordY = 0;
 const numberOfObjects = 10;
 
 const getRandomArrayElement = (element) => element [getRandomInt(0, element.length-1)];
@@ -33,8 +33,8 @@ const getRandomArray = (array) => array.splice (getRandomInt(0, array.length), g
 
 const createRandomObject = () => {
   avatarNum ++;
-  x = getRandomFloat(35.65000, 35.70000, 5);
-  y = getRandomFloat(139.70000, 139.80000, 5);
+  coordX = getRandomFloat(35.65000, 35.70000, 5);
+  coordY = getRandomFloat(139.70000, 139.80000, 5);
   const samplePhoto = ['https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/duonguyen-8LrGtIxxa4w.jpg',
     'https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/brandon-hoogenboom-SNxQGWxZQi0.jpg',
     'https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/claire-rendall-b6kAwr1i0Iw.jpg'];
@@ -46,7 +46,7 @@ const createRandomObject = () => {
     },
     offer : {
       title:'Сдаётся  жильё',
-      adress: `${x  }, ${  y}`,
+      adress: `${coordX  }, ${  coordY}`,
       price: getRandomInt (1, 100000),
       type: getRandomArrayElement (estateType),
       rooms: getRandomInt (1, 5),
@@ -58,10 +58,10 @@ const createRandomObject = () => {
       photos: getRandomArray (samplePhoto),
     },
     location: {
-      lag: x,
-      lng: y,
+      lag: coordX,
+      lng: coordY,
     },
   };
 };
 const randomObjects = new Array(numberOfObjects).fill().map(()=>createRandomObject());
-console.log (randomObjects);
+randomObjects;
