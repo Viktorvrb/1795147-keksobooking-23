@@ -1,2 +1,2 @@
-import {randomObjects} from '.data/';
+import { randomObjects } from './data.js';
 randomObjects;
