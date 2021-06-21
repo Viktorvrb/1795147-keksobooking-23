@@ -1,18 +1,6 @@
 import {getRandomInt,getRandomFloat} from './utils.js';
-const ESTATE_TYPE = [
-  'palace', 'flat', 'house', 'bungalow', 'hotel',
-];
-const TIME_TO_CHECK = [
-  '12:00', '13:00', '14:00',
-];
-const SAMPLE_PHOTOS = [
-  'https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/duonguyen-8LrGtIxxa4w.jpg',
-  'https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/brandon-hoogenboom-SNxQGWxZQi0.jpg',
-  'https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/claire-rendall-b6kAwr1i0Iw.jpg',
-];
-const SAMPLE_FEATURES = [
-  'wifi', 'dishwasher', 'parking', 'washer', 'elevator', 'conditioner',
-];
+import {ESTATE_TYPE,TIME_TO_CHECK,SAMPLE_PHOTOS,SAMPLE_FEATURES} from './arrays.js';
+
 let avatarNum = 0;
 let coordX = 0;
 let coordY = 0;
@@ -23,7 +11,6 @@ const getRandomArrayElement = (array) => {
   const element = array[index];
   return element;
 };
-
 
 const getRandomArray = (array) => {
   const index = getRandomInt(0, array.length);
