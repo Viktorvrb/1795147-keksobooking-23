@@ -1,5 +1,5 @@
 import {getRandomInt,getRandomFloat} from './utils.js';
-import {ESTATE_TYPE,TIME_TO_CHECK,SAMPLE_PHOTOS,SAMPLE_FEATURES} from './arrays.js';
+import {ESTATE_TYPE,TIME_TO_CHECK,SAMPLE_PHOTOS,SAMPLE_FEATURES} from './constants.js';
 
 let avatarNum = 0;
 let coordX = 0;
